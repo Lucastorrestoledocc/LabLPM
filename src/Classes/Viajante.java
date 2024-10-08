@@ -50,9 +50,6 @@ public class Viajante {
         this.documento = documento;
     }
 
-    public void getPassagens(){
-        return List<PassagemAerea>;
-    }
 
     // Método para pesquisar voos
     public List<PassagemAerea> PesquisarVoo(Aeroporto origem, Aeroporto destino, Date data) {
