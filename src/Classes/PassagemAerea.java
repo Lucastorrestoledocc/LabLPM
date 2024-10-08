@@ -126,6 +126,7 @@ public class PassagemAerea {
     public void setVooInternacional(boolean vooInternacional) {
         this.vooInternacional = vooInternacional;
     }
+    
 
         // Método para cadastrar passagem
     public static PassagemAerea CadastrarPassagem(Aeroporto origem, Aeroporto destino, CompanhiaAerea companhia, Date dataHora, String codigoVoo, double valorBasico, double valorBusiness, double valorPremium, double valorBagagem, double valorAdicional, String moeda, boolean internacional) {
