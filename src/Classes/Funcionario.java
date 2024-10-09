@@ -14,7 +14,67 @@ public class Funcionario{
 
     public String getNome() {
         return nome;
+    }package Classes;
+
+import java.util.Scanner;
+
+public class Funcionario {
+    private String nome;
+    private String sobrenome;
+    private String cargo;
+
+    // Construtor
+    public Funcionario(String nome, String sobrenome, String cargo) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.cargo = cargo;
     }
+
+    // Getters e Setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    // Método estático para cadastrar funcionário
+    public static Funcionario cadastrarFuncionario() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o nome do funcionário: ");
+        String nome = scanner.nextLine();
+        System.out.print("Digite o sobrenome do funcionário: ");
+        String sobrenome = scanner.nextLine();
+        System.out.print("Digite o cargo do funcionário: ");
+        String cargo = scanner.nextLine();
+
+        return new Funcionario(nome, sobrenome, cargo);
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionário: " + nome + " " + sobrenome + " - Cargo: " + cargo;
+    }
+}
+
 
     public void setNome(String nome) {
         this.nome = nome;
