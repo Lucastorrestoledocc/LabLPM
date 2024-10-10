@@ -19,9 +19,8 @@ public class main {
         // Cadastrar um funcionário
         System.out.println("=== Cadastrar Funcionário ===");
         Funcionario funcionario = Funcionario.CadastrarFuncionario();
-        if (funcionario != null) {
+
             funcionarios.add(funcionario);
-        }
 
         // Realizar cadastro de usuário
         System.out.println("\n=== Cadastrar Usuário ===");
@@ -82,18 +81,18 @@ public class main {
         System.out.print("O voo é internacional? (true/false): ");
         boolean internacional = scanner.nextBoolean();
 
-        PassagemAerea passagem = PassagemAerea.CadastrarPassagem(
+        boolean passagem = PassagemAerea.CadastrarPassagem(
             aeroportoOrigem, aeroportoDestino, companhiaAerea, new Date(dataHora),
             codigoVoo, valorBasico, valorBusiness, valorPremium, valorBagagem,
             valorAdicional, moeda, internacional
         );
-        passagens.add(passagem);
+        
 
         System.out.println("\n=== Realizar Compra ===");
         Compra compra = new Compra(passagens, 0.1);
         compra.RealizarCompra();
 
-        Viajante viajante = new Viajante("João", "Silva", "123456789");
+        Viajante viajante = new Viajante("João", "123456789", "1234", "MG123");
         viajante.EmitirBilhete();
 
         System.out.println("Valor total da compra: " + compra.CalcularRemuneracao());

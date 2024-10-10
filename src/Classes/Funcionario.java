@@ -58,7 +58,7 @@ public class Funcionario {
         this.cargo = cargo;
     }
 
-    public static Funcionario cadastrarFuncionario() {
+    public static Funcionario CadastrarFuncionario() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Digite o nome do funcionário: ");

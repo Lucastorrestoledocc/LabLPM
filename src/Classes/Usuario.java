@@ -2,9 +2,9 @@ package Classes;
 import java.util.Scanner;
 
 public class Usuario {
-    private String nome;
-    private String cpf;
-    private String senha;
+    protected String nome;
+    protected String cpf;
+    protected String senha;
 
     public Usuario(String nome, String cpf, String senha) {
         this.nome = nome;

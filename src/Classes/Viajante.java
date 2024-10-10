@@ -3,17 +3,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Viajante {
-    private String nome;
-    private String sobrenome;
+public class Viajante extends Usuario {
     private String documento;
 
-    // Construtor
-    public Viajante(String nome, String sobrenome, String documento) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
+    public Viajante(String nome, String cpf, String senha, String documento) {
+        super(nome, cpf, senha);
         this.documento = documento;
     }
+
 
 
     public String getNome() {
@@ -28,18 +25,7 @@ public class Viajante {
 
 
 
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-
-
+   
     public String getDocumento() {
         return documento;
     }
@@ -60,6 +46,6 @@ public class Viajante {
 
     // Método para emitir bilhete
     public void EmitirBilhete() {
-        System.out.println("Bilhete emitido com sucesso para o viajante " + nome + " " + sobrenome);
+        System.out.println("Bilhete emitido com sucesso para o viajante " + nome );
     }
 }
